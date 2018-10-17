@@ -71,22 +71,31 @@ p erik_lottery
 # 4. Get the type of Avril's pet Monty
 
 # Put Avril's pets into a separate variable for clarity
-avril_pets = users["Avril"][:pets].dup
+# avril_pets = users["Avril"][:pets].dup
+#
+# monty = ""
+#
+# # Loops over length of pet array
+# for i in 1..avril_pets.length
+#   # If petname = Monty, takes species and end loop
+#
+#   if avril_pets[i-1].has_value?("monty")
+#     monty = avril_pets[i-1][:species]
+#     break
+#   end
+#
+# end
 
-monty = ""
+for pet in users["Avril"][:pets]
 
-# Loops over length of pet array
-for i in 1..avril_pets.length
-  # If petname = Monty, takes species and end loop
-
-  if avril_pets[i-1].has_value?("monty")
-    monty = avril_pets[i-1][:species]
+  if pet[:name] == "monty"
+    p "Monty is a #{pet[:species]}"
     break
   end
 
 end
 
-p monty
+#p monty
 
 # 5. Get the smallest of Erik's lottery numbers
 
