@@ -63,7 +63,31 @@ p "Jonathan's Twitter handle is: #{users["Jonathan"][:twitter]}"
 p "Eric's hometown is: #{users["Erik"][:home_town]}"
 
 # 3. Get the array of Erik's lottery numbers
+
+erik_lottery = users["Erik"][:lottery_numbers]
+p "Eric's lottery number array:"
+p erik_lottery
+
 # 4. Get the type of Avril's pet Monty
+
+# Put Avril's pets into a separate variable for clarity
+avril_pets = users["Avril"][:pets].dup
+
+monty = ""
+
+# Loops over length of pet array
+for i in 1..avril_pets.length
+  # If petname = Monty, takes species and end loop
+
+  if avril_pets[i-1].has_value?("monty")
+    monty = avril_pets[i-1][:species]
+    break
+  end
+
+end
+
+p monty
+
 # 5. Get the smallest of Erik's lottery numbers
 # 6. Return an array of Avril's lottery numbers that are even
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
