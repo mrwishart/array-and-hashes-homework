@@ -89,7 +89,30 @@ end
 p monty
 
 # 5. Get the smallest of Erik's lottery numbers
+
+smallest_number = 999
+
+for number in erik_lottery
+
+  smallest_number = number if smallest_number > number
+
+end
+
+p "Erik's smallest number is: #{smallest_number}"
+
 # 6. Return an array of Avril's lottery numbers that are even
+
+avril_lottery = users["Avril"][:lottery_numbers]
+avril_even = []
+
+for number in avril_lottery
+
+  avril_even.push(number) if number%2 == 0
+
+end
+
+p avril_even
+
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 # 8. Change Erik's hometown to Edinburgh
 # 9. Add a pet dog to Erik called "Fluffy"
