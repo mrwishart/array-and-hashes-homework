@@ -14,7 +14,8 @@ stops.insert(4, "Polmont")
 
 # 4. Work out the index position of `"Linlithgow"`
 
-p "Linlithgow is at index position: #{stops.index("Linlithgow")}"
+p "Linlithgow is at index position: #{stops.index("Linlithgow")} (as of Q4)"
+puts ""
 
 # 5. Remove `"Livingston"` from the array using its name
 
@@ -27,7 +28,7 @@ stops.delete_at(cumbernauld_index)
 
 # 7. How many stops there are in the array?
 
-p "There are #{stops.length()} stops in the array"
+p "There are #{stops.length()} stops in the array by Q7"
 
 # 8. How many ways can we return `"Falkirk High"` from the array?
 
@@ -40,11 +41,16 @@ p stops.at(2)
 p stops[stops.index("Falkirk High")]
 p stops.select {|a| a == "Falkirk High"}
 p stops.reject {|a| a != "Falkirk High"}
+puts ""
 
 # 9. Reverse the positions of the stops in the array
 
-
+#p stops  -  To see initial loop
+stops.reverse!
+#p stops  -  To see if reverse worked
 
 # 10. Print out all the stops using a for loop
 
-p stops
+for station in stops
+  p station
+end
